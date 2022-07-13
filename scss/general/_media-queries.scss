@@ -1,0 +1,109 @@
+@media only screen and (max-width: 600px) {
+
+    .navbar {
+        background-color: #EDCB54;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        align-items: center;
+        position: relative;
+
+        .logo {
+            height: 60px;
+            width: 60px;
+            grid-column: 2 / 3;
+        }
+
+        .menu {
+            grid-column: 4 / 7;
+            display: flex;
+            position: absolute;
+            width: 100%;
+            height: 70vh;
+            display: grid;
+            align-items: center;
+            background-color: #EDCB54;
+            transform: translateX(170%);
+            transition: all 1s;
+            margin-top: 34em;
+            z-index: 1;
+
+            li {
+                list-style: none;
+                margin: 0 auto;
+
+                a {
+                    text-decoration: none;
+                    color: #181818;
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        ul {
+            li {
+                margin-right: 3em;
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .menu-bar {
+            display: none;
+            display: block;
+            grid-column: 8 / 10;
+            color: #fff;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 1;
+
+            .fas {
+                color: #181818;
+            }
+        }
+
+        .shop {
+            grid-column: 8 / 9;
+            justify-content: flex-end;
+            display: none;
+        }
+    }
+}
+
+.hero .info-content {
+    z-index: 0;
+    grid-column: 2 / 9;
+    grid-row: 5 / 7;
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+}
+
+.footer-section {
+    grid-template-areas: "listen-online social-network";
+
+    h2 {
+        display: none;
+    }
+
+    .social-network {
+        margin: 0 auto;
+
+        .fab {
+            color: #fff;
+        }
+    }
+}
