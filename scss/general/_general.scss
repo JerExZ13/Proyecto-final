@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.fas {
+    font-size: 1.2em;
+}
+
+.navbar {
+    background-color: $clr-1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+
+    .logo {
+        height: 60px;
+        width: 60px;
+        grid-column: 2 / 3;
+    }
+
+    .menu {
+        grid-column: 4 / 7;
+        display: flex;
+    }
+
+    ul li {
+        margin-right: 3em;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .shop {
+        grid-column: 8 / 9;
+        justify-content: flex-end;
+    }
+}
+
+.hero {
+    height: 83vh;
+    background-image: linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .9)), url(https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg?cs=srgb&dl=pexels-julias-torten-und-t%C3%B6rtchen-1179002.jpg&fm=jpg);
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    position: relative;
+
+    .info-content {
+        grid-column: 7 / 10;
+        grid-row: 3 / 7;
+        color: #fff;
+        z-index: 1;
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 5em;
+            color: $clr-1;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn {
+            font-size: 1em;
+            color: #fff;
+            background: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 1px solid$clr-1;
+            margin-top: 10px;
+
+            &:hover {
+                background-color: $clr-1;
+                color: #181818;
+            }
+        }
+    }
+
+
+}
+
+.footer-section {
+    display: grid;
+    height: 80px;
+    align-items: center;
+    background-color: $clr-2;
+    color: #fff;
+    grid-template-areas: "listen-online follow-me social-network";
+
+    .chef {
+        grid-template-areas: listen-online;
+        display: flex;
+        justify-content: center;
+        background-color: $clr-1;
+        color: #181818;
+        padding: 26px;
+
+        .fas {
+            margin-right: 15px;
+            font-size: 1.5em;
+        }
+    }
+
+    h2 {
+        grid-template-areas: follow-me;
+        text-align: center;
+    }
+
+    .social-network {
+        grid-template-areas: social-network;
+
+        .fab {
+            font-size: 1.4em;
+            color: $clr-1;
+            margin-right: 15px;
+            justify-content: flex-end;
+        }
+    }
+}
